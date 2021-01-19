@@ -24,9 +24,9 @@ jobs:
         run: |
           mkdir /opt/clang
           cd /opt/clang
-          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
-          tar -zxvf 417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
-          rm -rf 417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
+          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz -O clang.tar.gz
+          tar -zxvf clang.tar.gz
+          rm -rf clang.tar.gz
 
           cd /opt
           wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz -O gcc32.tar.xz
