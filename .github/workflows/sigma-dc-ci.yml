@@ -24,20 +24,20 @@ jobs:
         run: |
           mkdir /opt/clang
           cd /opt/clang
-          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/e490075c81db3990363e491e3947d1e48a05e370/clang-r399163b.tar.gz
-          tar -zxvf clang-r399163b.tar.gz
-          rm -rf clang-r399163b.tar.gz
+          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
+          tar -zxvf 417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
+          rm -rf 417f5871de0fa85037680a4b6fd245401e40d70c.tar.gz
 
           cd /opt
-          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz -O gcc32.tar.xz
+          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz -O gcc32.tar.xz
           tar -xvJf gcc32.tar.xz -C /opt
           rm -rf gcc32.tar.xz
-          mv gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf gcc32
+          mv gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf gcc32
 
-          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz -O gcc64.tar.xz
+          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu.tar.xz -O gcc64.tar.xz
           tar -xvJf gcc64.tar.xz -C /opt
           rm -rf gcc64.tar.xz
-          mv gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu gcc64
+          mv gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu gcc64
 
       - name: Clone Kernel Code
         run: |
